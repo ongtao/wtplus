@@ -17,7 +17,7 @@ import (
 const (
 	FundJsUrl       = "http://fundgz.1234567.com.cn/js/"
 	FundHTMLUrl     = "http://fund.eastmoney.com/"
-	MIN_RISE_NUM    = 0.5
+	MIN_RISE_NUM    = 1.5
 	MAX_FALL_NUM    = -1.5
 )
 
@@ -208,7 +208,7 @@ func SendEmail(content string) {
 	m := gomail.NewMessage()
 	m.SetHeader("From", emailName)
 	m.SetHeader("To", emailName)
-	m.SetHeader("Subject", "基金涨跌监控")
+	m.SetHeader("Subject", "TaoTalk-基金涨跌监控")
 	m.SetBody("text/html", content)
 	d := gomail.NewDialer("smtp.qq.com", 587, emailName, emailPassword)
 	if err := d.DialAndSend(m); err != nil {
