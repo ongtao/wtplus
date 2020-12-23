@@ -17,7 +17,7 @@ import (
 const (
 	FundJsUrl       = "http://fundgz.1234567.com.cn/js/"
 	FundHTMLUrl     = "http://fund.eastmoney.com/"
-	MIN_RISE_NUM    = 1.5
+	MIN_RISE_NUM    = 0
 	MAX_FALL_NUM    = -1.5
 )
 
