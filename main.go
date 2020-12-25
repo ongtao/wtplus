@@ -134,20 +134,22 @@ func GenerateHTML(fundResult []map[string]string) string {
 
 		date = fund["gztime"]
 		// 每日涨幅，涨跌幅度超出设定值才发出通知
-		dailyElement := `
-								   <tr>
-								     <td width="50" align="center">` + fund["memo"] + `</td>
-								     <td width="50" align="center">` + fund["fundcode"] + `</td>
-								     <td width="200" align="left">` + fund["name"] + `</td>
-								     <td width="50" align="center">` + fund["gszzl"] + `%</td>
-								     <td width="50" align="center">` + fund["gsz"] + `</td>
-								     <td width="50" align="center">` + fund["dwjz"] + `</td>
-								     <td width="100" align="center">` + fund["gztime"] + `</td>
-								     <td width="50" align="center">` + fund["weeklyChange"] + `</td>
-								     <td width="50" align="center">` + fund["oneMonthChange"] + `</td>
+		if (gszzl > 0 && gszzl >= 0.5) || (gszzl < 0 && gszzl <= -0.5) {
+			dailyElement := `
+				 <tr>
+					 <td width="50" align="center">` + fund["memo"] + `</td>
+					<td width="50" align="center">` + fund["fundcode"] + `</td>
+					<td width="200" align="left">` + fund["name"] + `</td>
+					<td width="50" align="center">` + fund["gszzl"] + `%</td>
+					<td width="50" align="center">` + fund["gsz"] + `</td>
+					<td width="50" align="center">` + fund["dwjz"] + `</td>
+					<td width="100" align="center">` + fund["gztime"] + `</td>
+					<td width="50" align="center">` + fund["weeklyChange"] + `</td>
+					<td width="50" align="center">` + fund["oneMonthChange"] + `</td>			    
                                    </tr>
 	                           `
-		dailyElements = append(dailyElements, dailyElement)
+		      dailyElements = append(dailyElements, dailyElement)
+		}
 	}
 	dailyContent = strings.Join(dailyElements, "\n")
 
