@@ -39,10 +39,10 @@ var dailyTitle = `
 				 <tr>
 				 <td width="50" align="center">分类</td>
 				 <td width="50" align="center">基金代码</td>
-	             <td width="200" align="left">基金名称</td>
-	             <td width="50" align="center">估算涨幅</td>
-	             <td width="50" align="center">当前估算净值</td>
-	             <td width="50" align="center">昨日单位净值</td>
+				 <td width="200" align="left">基金名称</td>
+				 <td width="50" align="center">估算涨幅</td>
+				 <td width="50" align="center">当前估算净值</td>
+				 <td width="50" align="center">昨日单位净值</td>
 				 <td width="100" align="center">估算时间</td>
 				 <td width="50" align="center">近1周净值变化</td>
 				 <td width="50" align="center">近1月净值变化</td>
@@ -138,13 +138,13 @@ func GenerateHTML(fundResult []map[string]string) string {
 								   <tr>
 								     <td width="50" align="center">` + fund["memo"] + `</td>
 								     <td width="50" align="center">` + fund["fundcode"] + `</td>
-                                     <td width="200" align="left">` + fund["name"] + `</td>
-                                     <td width="50" align="center">` + fund["gszzl"] + `%</td>
-                                     <td width="50" align="center">` + fund["gsz"] + `</td>
-                                     <td width="50" align="center">` + fund["dwjz"] + `</td>
-									 <td width="100" align="center">` + fund["gztime"] + `</td>
-									 <td width="50" align="center">` + fund["weeklyChange"] + `</td>
-									 <td width="50" align="center">` + fund["oneMonthChange"] + `</td>
+								     <td width="200" align="left">` + fund["name"] + `</td>
+								     <td width="50" align="center">` + fund["gszzl"] + `%</td>
+								     <td width="50" align="center">` + fund["gsz"] + `</td>
+								     <td width="50" align="center">` + fund["dwjz"] + `</td>
+								     <td width="100" align="center">` + fund["gztime"] + `</td>
+								     <td width="50" align="center">` + fund["weeklyChange"] + `</td>
+								     <td width="50" align="center">` + fund["oneMonthChange"] + `</td>
                                    </tr>
 	                           `
 		dailyElements = append(dailyElements, dailyElement)
