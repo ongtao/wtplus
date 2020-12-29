@@ -193,7 +193,7 @@ func SendEmail(content string) {
 	m := gomail.NewMessage()
 	m.SetHeader("From", emailName)
 	m.SetHeader("To", emailName)
-	m.SetHeader("Subject", "TaoTalk-基金涨跌监控 ["+date+"]")
+	m.SetHeader("Subject", "TaoTalk-基金涨跌监控 ["+date+"] + From travis-ci")
 	m.SetBody("text/html", content)
 	d := gomail.NewDialer("smtp.qq.com", 587, emailName, emailPassword)
 	if err := d.DialAndSend(m); err != nil {
