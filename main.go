@@ -203,13 +203,19 @@ func SendEmail(content string) {
 
 func main() {
 	funds := []Fund{
-		Fund{"163417", "yy", "WT"},
-		Fund{"005827", "yy", "WT"},
-		Fund{"000751", "yy", "WT"},
-		Fund{"519772", "yy", "WT"},
-		Fund{"000083", "yy", "WT"},
-		Fund{"001171", "yy", "WT"},
-		Fund{"161028", "yy", "WT"},
+		Fund{"000751", "yy", "WT-成长投资"},
+		Fund{"519704", "yy", "WT-成长投资"},
+		Fund{"163417", "yy", "WT-成长投资"},
+		Fund{"005827", "yy", "WT-价值投资"},
+		Fund{"000083", "yy", "WT-价值投资"},
+		Fund{"003984", "yy", "WT-价值投资"},
+		Fund{"519772", "yy", "WT-价值投资"},
+
+		Fund{"260108", "yy", "WT-成长投资"},
+
+		Fund{"001171", "yy", "WT(10)"},
+		Fund{"161028", "yy", "WT(10)"},
+		Fund{"003834", "yy", "WT(10)"},
 
 		Fund{"000751", "yy", "成长投资"},
 		Fund{"161005", "yy", "成长投资"},
